@@ -8,11 +8,12 @@ public class Game extends JFrame implements ActionListener, KeyListener {
     private Maze maze;
     private Pacman pacman;
     private Ghost ghost;
+    private PowerDot powerDot;
 
     public Game() {
         pacman = new Pacman();
         ghost = new Ghost();
-        maze = new Maze(pacman, ghost);
+        maze = new Maze(pacman, ghost, powerDot);
         this.getContentPane().add(maze);
         this.addKeyListener(this);
     }
@@ -24,7 +25,7 @@ public class Game extends JFrame implements ActionListener, KeyListener {
 
 
     public void actionPerformed (ActionEvent e) {
-        maze.repaint():
+        maze.repaint();
     }
     public static void main(String[] args) {
         Game win = new Game();
@@ -42,7 +43,7 @@ public class Game extends JFrame implements ActionListener, KeyListener {
             case KeyEvent.VK_UP: pacman.up(); break;
             case KeyEvent.VK_DOWN: pacman .down() ; break;
             case KeyEvent.VK_LEFT: pacman. left(); break;
-            case KeyEvent.VK_RIGHT: pacman.right); break;
+            case KeyEvent.VK_RIGHT: pacman.right(); break;
         }
     }
 
