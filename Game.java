@@ -17,13 +17,11 @@ public class Game extends JFrame implements ActionListener, KeyListener {
         pacman = new Pacman();
         ghost = new Ghost();
         powerDots = new ArrayList<>();
-
-        for(int x = 30; x <= 480; x += 40){
-            for(int y = 30; y <= 480; y += 40){
+        for(int x = 40; x <= 400; x += 40){
+            for(int y = 20; y <= 400; y += 40){
                 powerDots.add(new PowerDot(x, y));
             }
         }
-
         maze = new Maze(pacman, ghost, powerDots);
         this.getContentPane().add(maze);
         this.addKeyListener(this);
@@ -36,8 +34,20 @@ public class Game extends JFrame implements ActionListener, KeyListener {
 
 
     public void actionPerformed (ActionEvent e) {
-        maze.repaint();
-    }
+            checkCollision();
+            maze.repaint();
+        }
+
+        public void checkCollision(){
+            for(int i = 0; i < powerDots.size(); i++){
+                PowerDot dot = powerDots.get(i);
+                if(dot.getPositionX() == pacman.getPositionX() && dot.getPositionY() == pacman.getPositionY()){
+                    powerDots.remove(i);
+                    maze.removeDot(dot);
+                    break;
+                }
+            }
+        }
     public static void main(String[] args) {
         Game win = new Game();
         win.setSize(500, 500);

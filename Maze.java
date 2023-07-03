@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
 public class Maze extends JPanel {
@@ -20,9 +19,14 @@ public class Maze extends JPanel {
             item.draw(g);
         }
     }
+    
     Maze(Pacman pacman, Ghost ghost, List<PowerDot> powerDots){
         items.add(pacman);
         items.add(ghost);
         items.addAll(powerDots);
+    }
+
+    public void removeDot(Drawable item){
+        items.remove(item);
     }
 }

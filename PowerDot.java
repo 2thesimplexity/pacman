@@ -13,4 +13,12 @@ public class PowerDot implements Drawable{
         g.setColor(Color.WHITE);
         g.fillRect(positionX, positionY, 20, 20);
     }
+
+    public int getPositionX(){
+        return positionX;
+    }
+
+    public int getPositionY(){
+        return positionY;
+    }
 }

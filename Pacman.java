@@ -29,4 +29,12 @@ public class Pacman implements Drawable{
     public void right(){
         positionX += 20;
     }
+
+    public int getPositionX(){
+        return positionX;
+    }
+
+    public int getPositionY(){
+        return positionY;
+    }
 }
