@@ -3,19 +3,28 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Game extends JFrame implements ActionListener, KeyListener {
 
     private Maze maze;
     private Pacman pacman;
     private Ghost ghost;
-    private PowerDot powerDot;
+    private List<PowerDot> powerDots;
 
     public Game() {
         pacman = new Pacman();
         ghost = new Ghost();
-        powerDot = new PowerDot(300, 30);
+        powerDots = new ArrayList<>();
 
-        maze = new Maze(pacman, ghost, powerDot);
+        for(int x = 30; x <= 480; x += 40){
+            for(int y = 30; y <= 480; y += 40){
+                powerDots.add(new PowerDot(x, y));
+            }
+        }
+
+        maze = new Maze(pacman, ghost, powerDots);
         this.getContentPane().add(maze);
         this.addKeyListener(this);
     }

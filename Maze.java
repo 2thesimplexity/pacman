@@ -1,9 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.Graphics;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Maze extends JPanel {
-    private Drawable[] items = new Drawable[3];
+    private List<Drawable> items = new ArrayList<>();
 
     public void paintComponent (Graphics g){
         super.paintComponent(g);
@@ -15,14 +16,13 @@ public class Maze extends JPanel {
         for(int i = 0; i<500; i = i+10){
             g.drawLine(0,i, 500, i);
         }
-        for(int i = 0; i<items.length; i++){
-            items[i].draw(g);
+        for(Drawable item: items){
+            item.draw(g);
         }
     }
-    Maze(Pacman pacman, Ghost ghost, PowerDot powerDot){
-        items[0] = pacman;
-        items[1] = ghost;
-        items[2] = powerDot;
+    Maze(Pacman pacman, Ghost ghost, List<PowerDot> powerDots){
+        items.add(pacman);
+        items.add(ghost);
+        items.addAll(powerDots);
     }
-    
 }
