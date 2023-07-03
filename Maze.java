@@ -19,10 +19,10 @@ public class Maze extends JPanel {
             items[i].draw(g);
         }
     }
-    Maze(Pacman pacman, Ghost ghost, PowerDot powerDot){
+    Maze(Pacman pacman, Ghost ghost){
         items[0] = pacman;
         items[1] = ghost;
-        items[2] = powerDot;
+        items[2] = new PowerDot(300,30);
     }
     
 }

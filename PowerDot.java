@@ -4,9 +4,9 @@ public class PowerDot implements Drawable{
     private int positionX;
     private int positionY;
 
-    public PowerDot(short x, short y){
-        positionX = x;
-        positionY = y;
+    public PowerDot(int i, int j){
+        positionX = i;
+        positionY = j;
     }
 
     public void draw(Graphics g){

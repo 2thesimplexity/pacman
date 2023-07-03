@@ -8,12 +8,11 @@ public class Game extends JFrame implements ActionListener, KeyListener {
     private Maze maze;
     private Pacman pacman;
     private Ghost ghost;
-    private PowerDot powerDot;
 
     public Game() {
         pacman = new Pacman();
         ghost = new Ghost();
-        maze = new Maze(pacman, ghost, powerDot);
+        maze = new Maze(pacman, ghost);
         this.getContentPane().add(maze);
         this.addKeyListener(this);
     }
