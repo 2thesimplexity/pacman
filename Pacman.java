@@ -9,9 +9,9 @@ public class Pacman implements Drawable{
         go.fillRect(positionX, positionY, 20, 20);
         
         if(positionX > 400) positionX = 400;
-        if(positionX < 400) positionX = 400;
-        if(positionX > 0) positionX = 0;
+        if(positionY > 400) positionY = 400;
         if(positionX < 0) positionX = 0;
+        if(positionY < 0) positionY = 0;
     }
 
     public void up(){
@@ -23,10 +23,10 @@ public class Pacman implements Drawable{
     }
 
     public void left(){
-        positionY -= 20;
+        positionX -= 20;
     }
 
     public void right(){
-        positionY += 20;
+        positionX += 20;
     }
 }

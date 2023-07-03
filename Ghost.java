@@ -21,9 +21,9 @@ public class Ghost implements Drawable{
 
   
         if(positionX > 400) positionX = 400;
-        if(positionX < 400) positionX = 400;
-        if(positionX > 0) positionX = 0;
+        if(positionY > 400) positionY = 400;
         if(positionX < 0) positionX = 0;
+        if(positionY < 0) positionY = 0;
         g.fillRect(positionX, positionY, 20, 20);
     }
 }
