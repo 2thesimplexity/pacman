@@ -1,2 +1,2 @@
 # pacman
-# Pristine Tran and Triet Tran usernames belong to Triet Tran. I forgot to change the git config to my name, and I realized it half way
+# Pristine Tran, 2thesimplexity, Triet Tran usernames belong to Tran, Triet Luu Khoi. I forgot to change the git config to my name, and I realized it half way
