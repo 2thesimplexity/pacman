@@ -69,6 +69,7 @@ public class Game extends JFrame implements ActionListener, KeyListener {
             case KeyEvent.VK_DOWN: pacman .down() ; break;
             case KeyEvent.VK_LEFT: pacman. left(); break;
             case KeyEvent.VK_RIGHT: pacman.right(); break;
+            case KeyEvent.VK_P: pacman.setIsPink(); break;
         }
     }
 

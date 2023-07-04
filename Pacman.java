@@ -4,8 +4,20 @@ public class Pacman implements Drawable{
     private int positionX;
     private int positionY;
 
+    private int isPink = 0;
+
+    public void setIsPink() {
+        if (isPink == 0) { isPink++; }
+        else { isPink--; }
+    }
+
     public void draw(Graphics go){
-        go.setColor(Color.YELLOW);
+        if (isPink == 0) {
+            go.setColor(Color.YELLOW);
+        } else {
+            go.setColor(Color.PINK);
+        }
+
         go.fillRect(positionX, positionY, 20, 20);
         
         if(positionX > 400) positionX = 400;
