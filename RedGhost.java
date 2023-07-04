@@ -11,6 +11,7 @@ public class RedGhost implements Drawable{
     }
 
     class RedSoundPlayer {
+        //Add your own absolute file path for the .wav file
         private static final String AUDIO_FILE_PATH = "/Users/eeshanmishra/IdeaProjects/Pac-Man/src/10.wav";
 
         public void startSoundPlayback() {
