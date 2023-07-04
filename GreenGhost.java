@@ -10,6 +10,7 @@ public class GreenGhost implements Drawable{
         soundPlayer.startSoundPlayback();
     }
     class GreenSoundPlayer {
+        //Add your own absolute file path for the .wav file
         private static final String AUDIO_FILE_PATH = "/Users/eeshanmishra/IdeaProjects/Pac-Man/src/24.wav";
 
         public void startSoundPlayback() {
