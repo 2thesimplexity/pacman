@@ -1,0 +1,20 @@
+import java.awt.*;
+
+public class GreenGhost implements Drawable{
+    private int positionX = 400;
+    private int positionY = 100;
+
+    public void draw(Graphics g){
+        g.setColor(Color.GREEN);
+        if (Math.random() >0.5)
+            positionX += 20;
+        else
+            positionX -= 20;
+
+
+
+        if(positionX > 400) positionX = 400;
+        if(positionX < 0) positionX = 0;
+        g.fillRect(positionX, positionY, 20, 20);
+    }
+}
