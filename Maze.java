@@ -20,9 +20,11 @@ public class Maze extends JPanel {
         }
     }
     
-    Maze(Pacman pacman, Ghost ghost, List<PowerDot> powerDots){
+    Maze(Pacman pacman, BlueGhost blue, GreenGhost green, RedGhost red, List<PowerDot> powerDots){
         items.add(pacman);
-        items.add(ghost);
+        items.add(blue);
+        items.add(green);
+        items.add(red);
         items.addAll(powerDots);
     }
 
