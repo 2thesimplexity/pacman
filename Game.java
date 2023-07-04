@@ -10,19 +10,23 @@ public class Game extends JFrame implements ActionListener, KeyListener {
 
     private Maze maze;
     private Pacman pacman;
-    private Ghost ghost;
+    private BlueGhost blue;
+    private GreenGhost green;
+    private RedGhost red;
     private List<PowerDot> powerDots;
 
     public Game() {
         pacman = new Pacman();
-        ghost = new Ghost();
+        blue = new BlueGhost();
+        green = new GreenGhost();
+        red = new RedGhost();
         powerDots = new ArrayList<>();
         for(int x = 40; x <= 400; x += 40){
             for(int y = 20; y <= 400; y += 40){
                 powerDots.add(new PowerDot(x, y));
             }
         }
-        maze = new Maze(pacman, ghost, powerDots);
+        maze = new Maze(pacman, blue, green, red, powerDots);
         this.getContentPane().add(maze);
         this.addKeyListener(this);
     }
