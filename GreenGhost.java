@@ -2,7 +2,7 @@ import java.awt.*;
 
 public class GreenGhost implements Drawable{
     private int positionX = 400;
-    private int positionY = 100;
+    private int positionY = 80;
 
     public void draw(Graphics g){
         g.setColor(Color.GREEN);
